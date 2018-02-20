@@ -1,0 +1,1065 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:p="http://primefaces.org/ui">
+<h:body>
+    <ui:composition template="/template/common/commonLayout.xhtml">
+        <ui:define name="content">
+            <h:outputStylesheet library="css" name="base.css"/>
+            <h:outputStylesheet library="css" name="ibe.css"/>
+            <h:outputStylesheet library="css" name="ancillary.css"/>
+            <h:form id="seatForm">
+                <h:inputHidden id="seatInput" value="#{ticketBean.seatName}"/>
+                <p:remoteCommand name="remoteChangeCommand" process="seatInput"/>
+            </h:form>
+
+            <div
+                    class="seatoverview col-lg-5 col-md-6 col-sm-6 col-xs-12 seat-area"
+                    id="seat-select">
+                <div class="seat-map-headline">
+                    <span class="label not-available-seat">Unavailable</span> <span
+                        class="label selected-seat-label">Selected</span>
+                </div>
+                <div class="seat-select-child">
+                    <div class="plane-seat-wrapper" style="width: 239px;">
+                        <div id="plane-seat-selection" class="seat_template_7">
+                            <div id="A" class="seat-row gray-light">
+                                <div id="seatLetterPanel_A" class="seat letter">A</div>
+                                <div id="SeatDiv_1A" class="seat">
+                                    <input id="SEAT_1A" type="submit" name="SEAT_1A" value="1A"
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_FS"
+                                           title="?seat_price_message_FS? - 20.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_2A" class="seat">
+                                    <input id="SEAT_2A" type="submit" name="SEAT_2A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_3A" class="seat">
+                                    <input id="SEAT_3A" type="submit" name="SEAT_3A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_4A" class="seat">
+                                    <input id="SEAT_4A" type="submit" name="SEAT_4A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_5A" class="seat">
+                                    <input id="SEAT_5A" type="submit" name="SEAT_5A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_6A" class="seat">
+                                    <input id="SEAT_6A" type="submit" name="SEAT_6A" value="6A"
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_7A" class="seat">
+                                    <input id="SEAT_7A" type="submit" name="SEAT_7A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_8A" class="seat">
+                                    <input id="SEAT_8A" type="submit" name="SEAT_8A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_9A" class="seat">
+                                    <input id="SEAT_9A" type="submit" name="SEAT_9A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_10A" class="seat">
+                                    <input id="SEAT_10A" type="submit" name="SEAT_10A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_11A" class="seat">
+                                    <input id="SEAT_11A" type="submit" name="SEAT_11A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_12A" class="seat">
+                                    <input id="SEAT_12A" type="submit" name="SEAT_12A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_EX"
+                                           title="Exit Side Seat - 20.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_13A" class="seat">
+                                    <input id="SEAT_13A" type="submit" name="SEAT_13A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_EX"
+                                           title="Exit Side Seat - 20.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_14A" class="seat">
+                                    <input id="SEAT_14A" type="submit" name="SEAT_14A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_15A" class="seat">
+                                    <input id="SEAT_15A" type="submit" name="SEAT_15A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_16A" class="seat">
+                                    <input id="SEAT_16A" type="submit" name="SEAT_16A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_17A" class="seat">
+                                    <input id="SEAT_17A" type="submit" name="SEAT_17A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_18A" class="seat">
+                                    <input id="SEAT_18A" type="submit" name="SEAT_18A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_19A" class="seat">
+                                    <input id="SEAT_19A" type="submit" name="SEAT_19A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_20A" class="seat">
+                                    <input id="SEAT_20A" type="submit" name="SEAT_20A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_21A" class="seat">
+                                    <input id="SEAT_21A" type="submit" name="SEAT_21A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_22A" class="seat">
+                                    <input id="SEAT_22A" type="submit" name="SEAT_22A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_23A" class="seat">
+                                    <input id="SEAT_23A" type="submit" name="SEAT_23A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_24A" class="seat">
+                                    <input id="SEAT_24A" type="submit" name="SEAT_24A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_25A" class="seat">
+                                    <input id="SEAT_25A" type="submit" name="SEAT_25A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_26A" class="seat">
+                                    <input id="SEAT_26A" type="submit" name="SEAT_26A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_27A" class="seat">
+                                    <input id="SEAT_27A" type="submit" name="SEAT_27A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_28A" class="seat">
+                                    <input id="SEAT_28A" type="submit" name="SEAT_28A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_29A" class="seat">
+                                    <input id="SEAT_29A" type="submit" name="SEAT_29A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_30A" class="seat">
+                                    <input id="SEAT_30A" type="submit" name="SEAT_30A" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                            </div>
+                            <div id="B" class="seat-row gray-dark">
+                                <div id="seatLetterPanel_B" class="seat letter">B</div>
+                                <div id="SeatDiv_1B" class="seat">
+                                    <input id="SEAT_1B" type="submit" name="SEAT_1B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_FS"
+                                           title="?seat_price_message_FS? - 20.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_2B" class="seat">
+                                    <input id="SEAT_2B" type="submit" name="SEAT_2B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_3B" class="seat">
+                                    <input id="SEAT_3B" type="submit" name="SEAT_3B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_4B" class="seat">
+                                    <input id="SEAT_4B" type="submit" name="SEAT_4B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_5B" class="seat">
+                                    <input id="SEAT_5B" type="submit" name="SEAT_5B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_6B" class="seat">
+                                    <input id="SEAT_6B" type="submit" name="SEAT_6B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_7B" class="seat">
+                                    <input id="SEAT_7B" type="submit" name="SEAT_7B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_8B" class="seat">
+                                    <input id="SEAT_8B" type="submit" name="SEAT_8B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_9B" class="seat">
+                                    <input id="SEAT_9B" type="submit" name="SEAT_9B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_10B" class="seat">
+                                    <input id="SEAT_10B" type="submit" name="SEAT_10B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_11B" class="seat">
+                                    <input id="SEAT_11B" type="submit" name="SEAT_11B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_12B" class="seat">
+                                    <input id="SEAT_12B" type="submit" name="SEAT_12B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_EX"
+                                           title="Exit Side Seat - 20.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_13B" class="seat">
+                                    <input id="SEAT_13B" type="submit" name="SEAT_13B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_EX"
+                                           title="Exit Side Seat - 20.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_14B" class="seat">
+                                    <input id="SEAT_14B" type="submit" name="SEAT_14B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_15B" class="seat">
+                                    <input id="SEAT_15B" type="submit" name="SEAT_15B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_16B" class="seat">
+                                    <input id="SEAT_16B" type="submit" name="SEAT_16B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_17B" class="seat">
+                                    <input id="SEAT_17B" type="submit" name="SEAT_17B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_18B" class="seat">
+                                    <input id="SEAT_18B" type="submit" name="SEAT_18B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_19B" class="seat">
+                                    <input id="SEAT_19B" type="submit" name="SEAT_19B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_20B" class="seat">
+                                    <input id="SEAT_20B" type="submit" name="SEAT_20B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_21B" class="seat">
+                                    <input id="SEAT_21B" type="submit" name="SEAT_21B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_22B" class="seat">
+                                    <input id="SEAT_22B" type="submit" name="SEAT_22B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_23B" class="seat">
+                                    <input id="SEAT_23B" type="submit" name="SEAT_23B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_24B" class="seat">
+                                    <input id="SEAT_24B" type="submit" name="SEAT_24B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_25B" class="seat">
+                                    <input id="SEAT_25B" type="submit" name="SEAT_25B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_26B" class="seat">
+                                    <input id="SEAT_26B" type="submit" name="SEAT_26B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_27B" class="seat">
+                                    <input id="SEAT_27B" type="submit" name="SEAT_27B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_28B" class="seat">
+                                    <input id="SEAT_28B" type="submit" name="SEAT_28B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_29B" class="seat">
+                                    <input id="SEAT_29B" type="submit" name="SEAT_29B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_30B" class="seat">
+                                    <input id="SEAT_30B" type="submit" name="SEAT_30B" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                            </div>
+                            <div id="C" class="seat-row gray-light">
+                                <div id="seatLetterPanel_C" class="seat letter">C</div>
+                                <div id="SeatDiv_1C" class="seat">
+                                    <input id="SEAT_1C" type="submit" name="SEAT_1C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_FS"
+                                           title="?seat_price_message_FS? - 20.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_2C" class="seat">
+                                    <input id="SEAT_2C" type="submit" name="SEAT_2C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_3C" class="seat">
+                                    <input id="SEAT_3C" type="submit" name="SEAT_3C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_4C" class="seat">
+                                    <input id="SEAT_4C" type="submit" name="SEAT_4C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_5C" class="seat">
+                                    <input id="SEAT_5C" type="submit" name="SEAT_5C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_6C" class="seat">
+                                    <input id="SEAT_6C" type="submit" name="SEAT_6C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_7C" class="seat">
+                                    <input id="SEAT_7C" type="submit" name="SEAT_7C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_8C" class="seat">
+                                    <input id="SEAT_8C" type="submit" name="SEAT_8C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_9C" class="seat">
+                                    <input id="SEAT_9C" type="submit" name="SEAT_9C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_10C" class="seat">
+                                    <input id="SEAT_10C" type="submit" name="SEAT_10C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_11C" class="seat">
+                                    <input id="SEAT_11C" type="submit" name="SEAT_11C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_12C" class="seat">
+                                    <input id="SEAT_12C" type="submit" name="SEAT_12C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_EX"
+                                           title="Exit Side Seat - 20.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_13C" class="seat">
+                                    <input id="SEAT_13C" type="submit" name="SEAT_13C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_EX"
+                                           title="Exit Side Seat - 20.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_14C" class="seat">
+                                    <input id="SEAT_14C" type="submit" name="SEAT_14C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_15C" class="seat">
+                                    <input id="SEAT_15C" type="submit" name="SEAT_15C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_16C" class="seat">
+                                    <input id="SEAT_16C" type="submit" name="SEAT_16C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_17C" class="seat">
+                                    <input id="SEAT_17C" type="submit" name="SEAT_17C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_18C" class="seat">
+                                    <input id="SEAT_18C" type="submit" name="SEAT_18C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_19C" class="seat">
+                                    <input id="SEAT_19C" type="submit" name="SEAT_19C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_20C" class="seat">
+                                    <input id="SEAT_20C" type="submit" name="SEAT_20C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_21C" class="seat">
+                                    <input id="SEAT_21C" type="submit" name="SEAT_21C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_22C" class="seat">
+                                    <input id="SEAT_22C" type="submit" name="SEAT_22C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_23C" class="seat">
+                                    <input id="SEAT_23C" type="submit" name="SEAT_23C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_24C" class="seat">
+                                    <input id="SEAT_24C" type="submit" name="SEAT_24C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_25C" class="seat">
+                                    <input id="SEAT_25C" type="submit" name="SEAT_25C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_26C" class="seat">
+                                    <input id="SEAT_26C" type="submit" name="SEAT_26C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_27C" class="seat">
+                                    <input id="SEAT_27C" type="submit" name="SEAT_27C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_28C" class="seat">
+                                    <input id="SEAT_28C" type="submit" name="SEAT_28C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_29C" class="seat">
+                                    <input id="SEAT_29C" type="submit" name="SEAT_29C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_30C" class="seat">
+                                    <input id="SEAT_30C" type="submit" name="SEAT_30C" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                            </div>
+                            <div id="AISLE4" class="seat-row">
+                                <div id="seatLetterPanel_4" class="seat letter"></div>
+                                <div id="hall_4_1" class="number">1</div>
+                                <div id="hall_4_2" class="number">2</div>
+                                <div id="hall_4_3" class="number">3</div>
+                                <div id="hall_4_4" class="number">4</div>
+                                <div id="hall_4_5" class="number">5</div>
+                                <div id="hall_4_6" class="number">6</div>
+                                <div id="hall_4_7" class="number">7</div>
+                                <div id="hall_4_8" class="number">8</div>
+                                <div id="hall_4_9" class="number">9</div>
+                                <div id="hall_4_10" class="number">10</div>
+                                <div id="hall_4_11" class="number">11</div>
+                                <div id="hall_4_12" class="number">12</div>
+                                <div id="hall_4_13" class="number">13</div>
+                                <div id="hall_4_14" class="number">14</div>
+                                <div id="hall_4_15" class="number">15</div>
+                                <div id="hall_4_16" class="number">16</div>
+                                <div id="hall_4_17" class="number">17</div>
+                                <div id="hall_4_18" class="number">18</div>
+                                <div id="hall_4_19" class="number">19</div>
+                                <div id="hall_4_20" class="number">20</div>
+                                <div id="hall_4_21" class="number">21</div>
+                                <div id="hall_4_22" class="number">22</div>
+                                <div id="hall_4_23" class="number">23</div>
+                                <div id="hall_4_24" class="number">24</div>
+                                <div id="hall_4_25" class="number">25</div>
+                                <div id="hall_4_26" class="number">26</div>
+                                <div id="hall_4_27" class="number">27</div>
+                                <div id="hall_4_28" class="number">28</div>
+                                <div id="hall_4_29" class="number">29</div>
+                                <div id="hall_4_30" class="number">30</div>
+                            </div>
+                            <div id="D" class="seat-row gray-dark">
+                                <div id="seatLetterPanel_D" class="seat letter">D</div>
+                                <div id="SeatDiv_1D" class="seat">
+                                    <input id="SEAT_1D" type="submit" name="SEAT_1D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_FS"
+                                           title="?seat_price_message_FS? - 20.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_2D" class="seat">
+                                    <input id="SEAT_2D" type="submit" name="SEAT_2D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_3D" class="seat">
+                                    <input id="SEAT_3D" type="submit" name="SEAT_3D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_4D" class="seat">
+                                    <input id="SEAT_4D" type="submit" name="SEAT_4D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_5D" class="seat">
+                                    <input id="SEAT_5D" type="submit" name="SEAT_5D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_6D" class="seat">
+                                    <input id="SEAT_6D" type="submit" name="SEAT_6D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_7D" class="seat">
+                                    <input id="SEAT_7D" type="submit" name="SEAT_7D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_8D" class="seat">
+                                    <input id="SEAT_8D" type="submit" name="SEAT_8D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_9D" class="seat">
+                                    <input id="SEAT_9D" type="submit" name="SEAT_9D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_10D" class="seat">
+                                    <input id="SEAT_10D" type="submit" name="SEAT_10D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_11D" class="seat">
+                                    <input id="SEAT_11D" type="submit" name="SEAT_11D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_12D" class="seat">
+                                    <input id="SEAT_12D" type="submit" name="SEAT_12D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_EX"
+                                           title="Exit Side Seat - 20.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_13D" class="seat">
+                                    <input id="SEAT_13D" type="submit" name="SEAT_13D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_EX"
+                                           title="Exit Side Seat - 20.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_14D" class="seat">
+                                    <input id="SEAT_14D" type="submit" name="SEAT_14D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_15D" class="seat">
+                                    <input id="SEAT_15D" type="submit" name="SEAT_15D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_16D" class="seat">
+                                    <input id="SEAT_16D" type="submit" name="SEAT_16D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_17D" class="seat">
+                                    <input id="SEAT_17D" type="submit" name="SEAT_17D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_18D" class="seat">
+                                    <input id="SEAT_18D" type="submit" name="SEAT_18D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_19D" class="seat">
+                                    <input id="SEAT_19D" type="submit" name="SEAT_19D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_20D" class="seat">
+                                    <input id="SEAT_20D" type="submit" name="SEAT_20D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_21D" class="seat">
+                                    <input id="SEAT_21D" type="submit" name="SEAT_21D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_22D" class="seat">
+                                    <input id="SEAT_22D" type="submit" name="SEAT_22D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_23D" class="seat">
+                                    <input id="SEAT_23D" type="submit" name="SEAT_23D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_24D" class="seat">
+                                    <input id="SEAT_24D" type="submit" name="SEAT_24D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_25D" class="seat">
+                                    <input id="SEAT_25D" type="submit" name="SEAT_25D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_26D" class="seat">
+                                    <input id="SEAT_26D" type="submit" name="SEAT_26D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_27D" class="seat">
+                                    <input id="SEAT_27D" type="submit" name="SEAT_27D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_28D" class="seat">
+                                    <input id="SEAT_28D" type="submit" name="SEAT_28D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_29D" class="seat">
+                                    <input id="SEAT_29D" type="submit" name="SEAT_29D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                                <div id="SeatDiv_30D" class="seat">
+                                    <input id="SEAT_30D" type="submit" name="SEAT_30D" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_AS"
+                                           title="Aisle Side Seat - 0.0 TRY" class="aisle"/>
+                                </div>
+                            </div>
+                            <div id="E" class="seat-row gray-light">
+                                <div id="seatLetterPanel_E" class="seat letter">E</div>
+                                <div id="SeatDiv_1E" class="seat">
+                                    <input id="SEAT_1E" type="submit" name="SEAT_1E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_FS"
+                                           title="?seat_price_message_FS? - 20.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_2E" class="seat">
+                                    <input id="SEAT_2E" type="submit" name="SEAT_2E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_3E" class="seat">
+                                    <input id="SEAT_3E" type="submit" name="SEAT_3E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_4E" class="seat">
+                                    <input id="SEAT_4E" type="submit" name="SEAT_4E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_5E" class="seat">
+                                    <input id="SEAT_5E" type="submit" name="SEAT_5E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_6E" class="seat">
+                                    <input id="SEAT_6E" type="submit" name="SEAT_6E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_7E" class="seat">
+                                    <input id="SEAT_7E" type="submit" name="SEAT_7E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_8E" class="seat">
+                                    <input id="SEAT_8E" type="submit" name="SEAT_8E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_9E" class="seat">
+                                    <input id="SEAT_9E" type="submit" name="SEAT_9E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_10E" class="seat">
+                                    <input id="SEAT_10E" type="submit" name="SEAT_10E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_11E" class="seat">
+                                    <input id="SEAT_11E" type="submit" name="SEAT_11E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_12E" class="seat">
+                                    <input id="SEAT_12E" type="submit" name="SEAT_12E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_EX"
+                                           title="Exit Side Seat - 20.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_13E" class="seat">
+                                    <input id="SEAT_13E" type="submit" name="SEAT_13E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_EX"
+                                           title="Exit Side Seat - 20.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_14E" class="seat">
+                                    <input id="SEAT_14E" type="submit" name="SEAT_14E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_15E" class="seat">
+                                    <input id="SEAT_15E" type="submit" name="SEAT_15E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_16E" class="seat">
+                                    <input id="SEAT_16E" type="submit" name="SEAT_16E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_17E" class="seat">
+                                    <input id="SEAT_17E" type="submit" name="SEAT_17E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_18E" class="seat">
+                                    <input id="SEAT_18E" type="submit" name="SEAT_18E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_19E" class="seat">
+                                    <input id="SEAT_19E" type="submit" name="SEAT_19E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_20E" class="seat">
+                                    <input id="SEAT_20E" type="submit" name="SEAT_20E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_21E" class="seat">
+                                    <input id="SEAT_21E" type="submit" name="SEAT_21E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_22E" class="seat">
+                                    <input id="SEAT_22E" type="submit" name="SEAT_22E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_23E" class="seat">
+                                    <input id="SEAT_23E" type="submit" name="SEAT_23E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_24E" class="seat">
+                                    <input id="SEAT_24E" type="submit" name="SEAT_24E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_25E" class="seat">
+                                    <input id="SEAT_25E" type="submit" name="SEAT_25E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_26E" class="seat">
+                                    <input id="SEAT_26E" type="submit" name="SEAT_26E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_27E" class="seat">
+                                    <input id="SEAT_27E" type="submit" name="SEAT_27E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_28E" class="seat">
+                                    <input id="SEAT_28E" type="submit" name="SEAT_28E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_29E" class="seat">
+                                    <input id="SEAT_29E" type="submit" name="SEAT_29E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_30E" class="seat">
+                                    <input id="SEAT_30E" type="submit" name="SEAT_30E" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_MD"
+                                           title="Middle Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                            </div>
+                            <div id="F" class="seat-row gray-dark">
+                                <div id="seatLetterPanel_F" class="seat letter">F</div>
+                                <div id="SeatDiv_1F" class="seat">
+                                    <input id="SEAT_1F" type="submit" name="SEAT_1F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_FS"
+                                           title="?seat_price_message_FS? - 20.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_2F" class="seat">
+                                    <input id="SEAT_2F" type="submit" name="SEAT_2F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="window"/>
+                                </div>
+                                <div id="SeatDiv_3F" class="seat">
+                                    <input id="SEAT_3F" type="submit" name="SEAT_3F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_4F" class="seat">
+                                    <input id="SEAT_4F" type="submit" name="SEAT_4F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_5F" class="seat">
+                                    <input id="SEAT_5F" type="submit" name="SEAT_5F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_6F" class="seat">
+                                    <input id="SEAT_6F" type="submit" name="SEAT_6F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_7F" class="seat">
+                                    <input id="SEAT_7F" type="submit" name="SEAT_7F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_8F" class="seat">
+                                    <input id="SEAT_8F" type="submit" name="SEAT_8F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_9F" class="seat">
+                                    <input id="SEAT_9F" type="submit" name="SEAT_9F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_10F" class="seat">
+                                    <input id="SEAT_10F" type="submit" name="SEAT_10F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_11F" class="seat">
+                                    <input id="SEAT_11F" type="submit" name="SEAT_11F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_12F" class="seat">
+                                    <input id="SEAT_12F" type="submit" name="SEAT_12F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_EX"
+                                           title="Exit Side Seat - 20.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_13F" class="seat">
+                                    <input id="SEAT_13F" type="submit" name="SEAT_13F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_EX"
+                                           title="Exit Side Seat - 20.0 TRY" disabled="disabled"
+                                           class="not-available"/>
+                                </div>
+                                <div id="SeatDiv_14F" class="seat">
+                                    <input id="SEAT_14F" type="submit" name="SEAT_14F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_15F" class="seat">
+                                    <input id="SEAT_15F" type="submit" name="SEAT_15F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_16F" class="seat">
+                                    <input id="SEAT_16F" type="submit" name="SEAT_16F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_17F" class="seat">
+                                    <input id="SEAT_17F" type="submit" name="SEAT_17F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_18F" class="seat">
+                                    <input id="SEAT_18F" type="submit" name="SEAT_18F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_19F" class="seat">
+                                    <input id="SEAT_19F" type="submit" name="SEAT_19F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_20F" class="seat">
+                                    <input id="SEAT_20F" type="submit" name="SEAT_20F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_21F" class="seat">
+                                    <input id="SEAT_21F" type="submit" name="SEAT_21F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_22F" class="seat">
+                                    <input id="SEAT_22F" type="submit" name="SEAT_22F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_23F" class="seat">
+                                    <input id="SEAT_23F" type="submit" name="SEAT_23F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_24F" class="seat">
+                                    <input id="SEAT_24F" type="submit" name="SEAT_24F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_25F" class="seat">
+                                    <input id="SEAT_25F" type="submit" name="SEAT_25F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_26F" class="seat">
+                                    <input id="SEAT_26F" type="submit" name="SEAT_26F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_27F" class="seat">
+                                    <input id="SEAT_27F" type="submit" name="SEAT_27F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_28F" class="seat">
+                                    <input id="SEAT_28F" type="submit" name="SEAT_28F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_29F" class="seat">
+                                    <input id="SEAT_29F" type="submit" name="SEAT_29F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                                <div id="SeatDiv_30F" class="seat">
+                                    <input id="SEAT_30F" type="submit" name="SEAT_30F" value=""
+                                           style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
+                                           title="Window Side Seat - 0.0 TRY" class="middle"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="seatPriceLabels">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td style="background-color: IBE_PR_VIS_SEAT_COLOR_AS;">
+                                <div class="aisle-seat seat-info-box"></div>
+                            </td>
+                            <td><span>Aisle Side Seat - 0.0 0.0 TRY </span></td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: IBE_PR_VIS_SEAT_COLOR_WN;">
+                                <div class="window-seat seat-info-box"></div>
+                            </td>
+                            <td><span>Window Side Seat - 0.0 0.0 TRY </span></td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: IBE_PR_VIS_SEAT_COLOR_MD;">
+                                <div class="middle-seat seat-info-box"></div>
+                            </td>
+                            <td><span>Middle Side Seat - 0.0 0.0 TRY </span></td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: IBE_PR_VIS_SEAT_COLOR_EX;">
+                                <div class="exit-seat seat-info-box"></div>
+                            </td>
+                            <td><span>Exit Side Seat - 20.0 20.0 TRY </span></td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: IBE_PR_VIS_SEAT_COLOR_FS;">
+                                <div class="front-seat seat-info-box"></div>
+                            </td>
+                            <td><span>?IBE_MSG_ANC_FST_DNC_seat_price_message_FS?
+										- 20.0 20.0 TRY </span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <script type="text/javascript">
+                var buttons = document.getElementsByTagName("input");
+                var buttonsCount = buttons.length;
+                var seatId;
+                for (var i = 0; buttonsCount > i; i += 1) {
+                    buttons[i].onclick = function (e) {
+                        seatId = this.id;
+                        document.getElementById('seatForm:seatInput').value = seatId;
+                        remoteChangeCommand();
+                        document.getElementById('seatForm').submit();
+                        window.location.replace('/ucakBilet.jsf');
+                    };
+                }
+
+
+            </script>
+
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

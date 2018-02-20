@@ -1,0 +1,13 @@
+package com.tam.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.tam.model.ContactInfo;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ContactInfoRepository extends JpaRepository<ContactInfo, Integer> {
+	ContactInfo findById(int id);
+
+}
+

@@ -1,0 +1,5 @@
+
+csquid:S00107"AConstructor has 9 parameters, which is greater than 7 authorized.(úØþÙüÿÿÿÿ8þ¤Îœ›,
+Zsquid:S1068"9Remove this unused "paymentTypeRepository" private field.(ïú›Ìûÿÿÿÿ8þ¤Îœ›,
+‡"squid:ClassVariableVisibilityCheck"TMake segments a static final constant or non-public and provide accessors if needed.(ÇÛ§Œ8þ¤Îœ›,
+Nsquid:S1068"2Remove this unused "userRepository" private field.(¼²Æ÷8þ¤Îœ›,

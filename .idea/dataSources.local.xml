@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="dataSource" uuid="d39a06d3-e76e-4621-a347-f877ca3f4fe2">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>tam</user-name>
+    </data-source>
+    <data-source name="hibernate:hibernate.cfg.xml/Hibernate" uuid="9e86e75c-28a4-44fd-a010-8bd4a4fdfb2a">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>tam</user-name>
+    </data-source>
+    <data-source name="application" uuid="332f3302-9143-44e0-befe-0408a99b9034">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>tam</user-name>
+    </data-source>
+  </component>
+</project>

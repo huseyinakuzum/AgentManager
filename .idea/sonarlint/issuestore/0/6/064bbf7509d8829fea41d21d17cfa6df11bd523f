@@ -1,0 +1,5 @@
+
+jsquid:S2068"U'password' detected in this expression, review this potentially hardcoded credential.(ží’¯
+psquid:S4144"[Update this method so that its implementation is not identical to "setUserName" on line 57.(Ÿš¯‡
+„squid:S1845"oRename method "setUsername" to prevent any misunderstanding/clash with method "setUserName" defined on line 57.(Ÿš¯‡
+lsquid:UselessImportCheck"ERemove this unused import 'org.springframework.stereotype.Component'.(Þ÷Ñ¸ÿÿÿÿÿ
