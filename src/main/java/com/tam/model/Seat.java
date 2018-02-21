@@ -33,26 +33,16 @@ public class Seat implements java.io.Serializable {
     @Column(name = "record_date", length = 19)
     private Date recordDate;
 
+    @ManyToOne
+    @JoinColumn(name = "seg_id")
+    private Segment segment;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.REFRESH, CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH})
-    @JoinTable(name = "seat_segment",
-            joinColumns = @JoinColumn(name = "seat_id"),
-            inverseJoinColumns = @JoinColumn(name = "segment_id"))
-    private List<Segment> segments;
-
-    public List<Segment> getSegments() {
-        return segments;
+    public Segment getSegment() {
+        return segment;
     }
 
-    public void setSegments(List<Segment> segments) {
-        this.segments = segments;
-    }
-
-    public void addSegment(Segment segment) {
-        if (segments == null) {
-            segments = new ArrayList<>();
-        }
-        segments.add(segment);
+    public void setSegment(Segment segment) {
+        this.segment = segment;
     }
 
     public Integer getId() {

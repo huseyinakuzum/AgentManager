@@ -4,9 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.*;
 
 import com.tam.service.PaymentTypeService;
 import com.tam.service.SeatService;
@@ -23,7 +21,7 @@ import com.tam.service.PortService;
 import com.tam.service.TicketService;
 
 @ManagedBean
-@RequestScoped
+@SessionScoped
 public class TicketBean implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -43,6 +41,7 @@ public class TicketBean implements Serializable {
     private Port port = new Port();
     private List<Port> portList;
     private Segment segment = new Segment();
+    private Segment seatSegment = new Segment();
     private List<Segment> segmentList = new ArrayList<>();
     private Ticket ticket = new Ticket();
     private List<Ticket> ticketList = new ArrayList<>();
@@ -56,6 +55,7 @@ public class TicketBean implements Serializable {
     private List<PaymentType> paymentTypes = new ArrayList<>();
     private List<String> portNames = new ArrayList<>();
     private List<String> portCodes = new ArrayList<>();
+    private List<Seat> seats = new ArrayList<>();
     private Seat seat = new Seat();
     private String seatName = "SEAT_NULL";
 
@@ -82,6 +82,7 @@ public class TicketBean implements Serializable {
     public void saveSegment() {
         segmentList.add(segment);
         ticketService.saveSegment(segment);
+        allocateSeat();
         segment = new Segment();
     }
 
@@ -91,15 +92,18 @@ public class TicketBean implements Serializable {
 
     public void savePax() {
         paxList.add(pax);
-        seat.setSeatName(seatName.substring(5));
-        seat.addSegment(segment);
         ticketService.savePax(pax, contactInfo, pnr);
+        allocateSeat();
         pax = new Pax();
+    }
+
+    public void allocateSeat(){
+        seats = new ArrayList<>(paxList.size()*segmentList.size());
     }
 
     public void saveTicket() {
         ticketList.add(ticket);
-        ticketService.saveTicket(ticket, pnr, paxList.get(paxList.size() - 1), segmentList, seat);
+        ticketService.saveTicket(ticket, pnr, paxList.get(paxList.size() - 1), segmentList, seats);
         ticket = new Ticket();
     }
 
@@ -149,8 +153,17 @@ public class TicketBean implements Serializable {
         return portService;
     }
 
+    public PaymentTypeService getPaymentTypeService() {
+        return paymentTypeService;
+    }
+
+    public void setPaymentTypeService(PaymentTypeService paymentTypeService) {
+        this.paymentTypeService = paymentTypeService;
+    }
+
     public void setPortService(PortService portService) {
         this.portService = portService;
+
     }
 
     public PaymentType getPaymentType() {
@@ -293,5 +306,21 @@ public class TicketBean implements Serializable {
 
     public void setSeatName(String seatName) {
         this.seatName = seatName;
+    }
+
+    public List<Seat> getSeats() {
+        return seats;
+    }
+
+    public void setSeats(List<Seat> seats) {
+        this.seats = seats;
+    }
+
+    public Segment getSeatSegment() {
+        return seatSegment;
+    }
+
+    public void setSeatSegment(Segment seatSegment) {
+        this.seatSegment = seatSegment;
     }
 }

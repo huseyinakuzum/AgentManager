@@ -85,7 +85,7 @@ public class TicketService {
     }
 
     @Transactional
-    public void saveTicket(Ticket ticket, Pnr pnr, Pax pax, List<Segment> segments, Seat seat) {
+    public void saveTicket(Ticket ticket, Pnr pnr, Pax pax, List<Segment> segments, List<Seat> seats) {
         Date dt = new Date();
         Ticket tc = ticket;
         // Create a coupons set
@@ -101,16 +101,23 @@ public class TicketService {
                 couponRepository.save(coupon);
                 coupons.add(coupon);
                 tempCoupon = coupon;
-                coupon = new Coupon();
             }
         }
-        seat.setCoupon(tempCoupon);
+
+        for (Seat seat : seats) {
+            for (Coupon coupon : coupons) {
+                if (coupon.getSegment() == seat.getSegment()) {
+                    seat.setCoupon(coupon);
+                    seat.getSegment().addSeat(seat);
+                    seatRepository.save(seat);
+                }
+            }
+        }
         ticket.setSellingCurrency(ticket.getBuyingCurrency());
         ticket.setPnr(pnr);
         ticket.setUser(userRepository.findOne(1));
         ticket.setPax(pax);
         ticket.setCoupons(coupons);
-        seatRepository.save(seat);
         ticketRepository.save(ticket);
     }
 

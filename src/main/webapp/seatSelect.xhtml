@@ -15,8 +15,22 @@
             <h:outputStylesheet library="css" name="ancillary.css"/>
             <h:form id="seatForm">
                 <h:inputHidden id="seatInput" value="#{ticketBean.seatName}"/>
+                <h:inputHidden id="seatSegmentInput" value="#{ticketBean.seatSegment}"/>
+
                 <p:remoteCommand name="remoteChangeCommand" process="seatInput"/>
+                <p:remoteCommand name="remoteChangeCommand" process="seatSegmentInput"/>
+
+                <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+                    <p:outputLabel for="segment" value="Segment:"/>
+                    <p:selectOneRadio id="segment" value="#{ticketBean  .seatSegment}" layout="grid" columns="3">
+                        <f:selectItems value="#{ticketBean.segmentList}" var="c" itemLabel="#{segment}"
+                                       itemValue="#{segment}"/>
+                    </p:selectOneRadio>
+                </h:panelGrid>
             </h:form>
+
+
+
 
             <div
                     class="seatoverview col-lg-5 col-md-6 col-sm-6 col-xs-12 seat-area"
@@ -1047,13 +1061,15 @@
                 var buttonsCount = buttons.length;
                 var seatId;
                 for (var i = 0; buttonsCount > i; i += 1) {
-                    buttons[i].onclick = function (e) {
-                        seatId = this.id;
-                        document.getElementById('seatForm:seatInput').value = seatId;
-                        remoteChangeCommand();
-                        document.getElementById('seatForm').submit();
-                        window.location.replace('/ucakBilet.jsf');
-                    };
+                    if (!(buttons[i].type === 'radio')) {
+                        buttons[i].onclick = function (e) {
+                            seatId = this.id;
+                            document.getElementById('seatForm:seatInput').value = seatId;
+                            remoteChangeCommand();
+                            document.getElementById('seatForm').submit();
+                            window.location.replace('/ucakBilet.jsf');
+                        };
+                    }
                 }
 
 

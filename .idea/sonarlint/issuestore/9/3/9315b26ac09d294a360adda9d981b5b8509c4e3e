@@ -1,6 +1,7 @@
 
-osquid:S1450"SRemove the "port" field and declare it as a local variable in the relevant methods.(Ü— ô8Úÿ–›,
-Isquid:S1948"-Make "portService" transient or serializable.(ÂÑÑÖ8Úÿ–›,
-Nsquid:S1948"-Make "seatService" transient or serializable.(ÕçÖÉüÿÿÿÿ8Úÿ–›,
-Psquid:S1948"/Make "ticketService" transient or serializable.(€âèÅùÿÿÿÿ8ºôòœ›,
-Dsquid:S1068"(Remove this unused "port" private field.(Ü— ô8Úÿ–›,
+Nsquid:S1948"-Make "seatService" transient or serializable.(ÕçÖÉüÿÿÿÿ8ÿ§Ãª›,
+Psquid:S1948"4Make "paymentTypeService" transient or serializable.(–ôÔü8ÿ§Ãª›,
+osquid:S1450"SRemove the "port" field and declare it as a local variable in the relevant methods.(Ü— ô8ÿ§Ãª›,
+Isquid:S1948"-Make "portService" transient or serializable.(ÂÑÑÖ8ÿ§Ãª›,
+Psquid:S1948"/Make "ticketService" transient or serializable.(€âèÅùÿÿÿÿ8ÿ§Ãª›,
+Dsquid:S1068"(Remove this unused "port" private field.(Ü— ô8ÿ§Ãª›,

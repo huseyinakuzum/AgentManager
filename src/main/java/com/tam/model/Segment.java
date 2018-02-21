@@ -2,10 +2,7 @@ package com.tam.model;
 
 // Generated Apr 26, 2015 5:10:28 PM by Hibernate Tools 4.0.0
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import javax.persistence.*;
 
 import static javax.persistence.GenerationType.IDENTITY;
@@ -28,8 +25,8 @@ public class Segment implements java.io.Serializable {
     private String fltNo;
     private Date depDate;
     private Date recordDate;
-    private List<Segment> segments;
     private Set<Coupon> coupons = new HashSet<Coupon>(0);
+    private List<Seat> seats = new ArrayList<>();
 
     public Segment() {
     }
@@ -134,15 +131,27 @@ public class Segment implements java.io.Serializable {
         this.coupons = coupons;
     }
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.REFRESH, CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH})
-    @JoinTable(name = "seat_segment",
-            joinColumns = @JoinColumn(name = "segment_id"),
-            inverseJoinColumns = @JoinColumn(name = "seat_id"))
-    public List<Segment> getSegments() {
-        return segments;
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "segment")
+    public List<Seat> getSeats() {
+        return seats;
     }
 
-    public void setSegments(List<Segment> segments) {
-        this.segments = segments;
+    public void setSeats(List<Seat> seats) {
+        this.seats = seats;
+    }
+
+    public void addSeat(Seat seat) {
+        if (seats == null) {
+            seats = new ArrayList<>();
+        }
+        seats.add(seat);
+        seat.setSegment(this);
+    }
+
+    @Override
+    public String toString() {
+        return
+                "DepPort= " + portByDepPort.getCode() + '\n' +
+                        "ArrPort= " + portByArrPort.getCode();
     }
 }

@@ -1,19 +1,19 @@
 
-Ksquid:S1948"/Make "searchService" transient or serializable.(ÎÜÓÜ8ÿÿåœ›,
-Csquid:S1948"(Make "logger" transient or serializable.(±„ßr8ÿÿåœ›,
-Nsquid:S1481"-Remove this unused "codeList" local variable.(û“šìıÿÿÿÿ8ºú§›,
-_squid:S1155">Use isEmpty() to check whether the collection is empty or not.(¹ŞÊÿÿÿÿÿ8şè¢›,
+Esquid:S1068"*Remove this unused "logger" private field.(±„ßr8°øÒª›,
+}squid:S4144"\Update this method so that its implementation is not identical to "getSegments" on line 252.(õ¾‹şÿÿÿÿ8°øÒª›,
+}squid:S4144"\Update this method so that its implementation is not identical to "setSegments" on line 256.(ÆŒ‹¢üÿÿÿÿ8°øÒª›,
 Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(¸³ƒ‡ıÿÿÿÿ8ÿÿåœ›,
-Isquid:S1948"-Make "portService" transient or serializable.(ÂÑÑÖ8ÿÿåœ›,
+squid:S106"9Replace this use of System.out or System.err by a logger.(¸³ƒ‡ıÿÿÿÿ8°øÒª›,
 T
-squid:S106"9Replace this use of System.out or System.err by a logger.(á‹Ã…8ÿÿåœ›,
-_squid:S1155">Use isEmpty() to check whether the collection is empty or not.(åù©îıÿÿÿÿ8ºú§›,
-Psquid:S1948"/Make "ticketService" transient or serializable.(€âèÅùÿÿÿÿ8ÿÿåœ›,
-]squid:S1854"<Remove this useless assignment to local variable "codeList".(û“šìıÿÿÿÿ8œ­®›,
-}squid:S4144"\Update this method so that its implementation is not identical to "getSegments" on line 252.(õ¾‹şÿÿÿÿ8ºú§›,
-Esquid:S1068"*Remove this unused "logger" private field.(±„ßr8ÿÿåœ›,
-Hsquid:S1172",Remove this unused method parameter "event".(¡ô«È8ºú§›,
-}squid:S4144"\Update this method so that its implementation is not identical to "setSegments" on line 256.(ÆŒ‹¢üÿÿÿÿ8ºú§›,
-Zsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(Êêœ‚8Š‹©›,
-Hsquid:S1172",Remove this unused method parameter "event".(Èâğ‚8ºú§›,
+squid:S106"9Replace this use of System.out or System.err by a logger.(á‹Ã…8°øÒª›,
+Nsquid:S1481"-Remove this unused "codeList" local variable.(û“šìıÿÿÿÿ8°øÒª›,
+Hsquid:S1172",Remove this unused method parameter "event".(¡ô«È8°øÒª›,
+Hsquid:S1172",Remove this unused method parameter "event".(Èâğ‚8°øÒª›,
+]squid:S1854"<Remove this useless assignment to local variable "codeList".(û“šìıÿÿÿÿ8°øÒª›,
+Psquid:S1948"/Make "ticketService" transient or serializable.(€âèÅùÿÿÿÿ8°øÒª›,
+Isquid:S1948"-Make "portService" transient or serializable.(ÂÑÑÖ8°øÒª›,
+Ksquid:S1948"/Make "searchService" transient or serializable.(ÎÜÓÜ8°øÒª›,
+Csquid:S1948"(Make "logger" transient or serializable.(±„ßr8°øÒª›,
+_squid:S1155">Use isEmpty() to check whether the collection is empty or not.(¹ŞÊÿÿÿÿÿ8°øÒª›,
+_squid:S1155">Use isEmpty() to check whether the collection is empty or not.(åù©îıÿÿÿÿ8°øÒª›,
+Zsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(Êêœ‚8°øÒª›,

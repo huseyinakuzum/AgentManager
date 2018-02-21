@@ -1,4 +1,4 @@
 
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ú°ºúÿÿÿÿ
-Vsquid:S1126"AReplace this if-then-else statement by a single return statement.(–Ïˆì
-–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ü§ŸÝ
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ú°ºúÿÿÿÿ8ûúÒª›,
+]squid:S1126"AReplace this if-then-else statement by a single return statement.(–Ïˆì8ûúÒª›,
+squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ü§ŸÝ8ûúÒª›,
