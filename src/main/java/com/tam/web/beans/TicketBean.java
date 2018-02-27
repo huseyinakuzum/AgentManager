@@ -79,6 +79,17 @@ public class TicketBean implements Serializable {
     public void saveSegment() {
         segmentList.add(segment);
         ticketService.saveSegment(segment);
+        for (Pax aPaxList : paxList) {
+            Seat s = new Seat();
+            Coupon c = new Coupon();
+            Ticket t = new Ticket();
+            Pax tempPax = aPaxList;
+            t.setPax(tempPax);
+            c.setTicket(t);
+            s.setCoupon(c);
+            s.setSegment(segment);
+            seats.add(s);
+        }
         segment = new Segment();
     }
 
@@ -89,16 +100,16 @@ public class TicketBean implements Serializable {
     public void savePax() {
         paxList.add(pax);
         ticketService.savePax(pax, contactInfo, pnr);
-        for (int i = 0; i < segmentList.size(); i++) {
+        for (Segment aSegmentList : segmentList) {
             Seat s = new Seat();
             Coupon c = new Coupon();
             Ticket t = new Ticket();
-            Pax tempPax = new Pax();
+            Pax tempPax;
             tempPax = pax;
             t.setPax(tempPax);
             c.setTicket(t);
             s.setCoupon(c);
-            s.setSegment(segmentList.get(i));
+            s.setSegment(aSegmentList);
             seats.add(s);
         }
         pax = new Pax();

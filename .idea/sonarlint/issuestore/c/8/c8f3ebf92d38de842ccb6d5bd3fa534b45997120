@@ -1,4 +1,4 @@
 
-usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Æ¯Ş8Ñà³¢,
-psquid:UselessImportCheck"BRemove this unused import 'org.hibernate.annotations.CascadeType'.(™ğÅ÷ÿÿÿÿÿ8Ñà³¢,
 tsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¥Ùç}8Ñà³¢,
+psquid:UselessImportCheck"BRemove this unused import 'org.hibernate.annotations.CascadeType'.(™ğÅ÷ÿÿÿÿÿ8Ñà³¢,
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Æ¯Ş8Ñà³¢,
