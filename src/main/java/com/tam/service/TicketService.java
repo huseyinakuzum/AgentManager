@@ -107,7 +107,11 @@ public class TicketService {
         for (Seat seat : seats) {
             seat.setSeatName(seat.getSeatName().substring(6));
             for (Coupon coupon : coupons) {
-                if (coupon.getSegment() == seat.getSegment()) {
+                if (coupon.getSegment().getPortByDepPort().getCode().equals(seat.getSegment().getPortByDepPort().getCode()) &&
+                        coupon.getSegment().getPortByArrPort().getCode().equals(seat.getSegment().getPortByArrPort().getCode()) &&
+                        coupon.getSegment().getDepDate().equals(seat.getSegment().getDepDate()) &&
+                        coupon.getTicket().getPax().getName().equals(seat.getCoupon().getTicket().getPax().getName()) &&
+                        coupon.getTicket().getPax().getSurname().equals(seat.getCoupon().getTicket().getPax().getSurname())) {
                     seat.setCoupon(coupon);
                     seat.getSegment().addSeat(seat);
                     seatRepository.save(seat);

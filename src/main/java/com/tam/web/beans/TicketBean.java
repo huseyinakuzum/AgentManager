@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.*;
 import javax.faces.context.ExternalContext;
@@ -170,16 +171,11 @@ public class TicketBean implements Serializable {
 
     public int indexOfSeats(Seat s) {
         for (int i = 0; i < seats.size(); i++) {
-            if (seats.get(i).getCoupon().getTicket().getPax().getName().
-                    equals(s.getCoupon().getTicket().getPax().getName()) &&
-                    seats.get(i).getCoupon().getTicket().getPax().getSurname().
-                            equals(s.getCoupon().getTicket().getPax().getSurname()) &&
-                    seats.get(i).getSegment().getPortByDepPort().getCode().
-                            equals(s.getSegment().getPortByDepPort().getCode()) &&
-                    seats.get(i).getSegment().getPortByArrPort().getCode().
-                            equals(s.getSegment().getPortByArrPort().getCode()) &&
-                    seats.get(i).getSegment().getDepDate().
-                            equals(s.getSegment().getDepDate())) {
+            if (Objects.equals(seats.get(i).getCoupon().getTicket().getPax().getName(), s.getCoupon().getTicket().getPax().getName()) &&
+                    Objects.equals(seats.get(i).getCoupon().getTicket().getPax().getSurname(), s.getCoupon().getTicket().getPax().getSurname()) &&
+                    Objects.equals(seats.get(i).getSegment().getPortByDepPort().getCode(), s.getSegment().getPortByDepPort().getCode()) &&
+                    Objects.equals(seats.get(i).getSegment().getPortByArrPort().getCode(), s.getSegment().getPortByArrPort().getCode()) &&
+                    Objects.equals(seats.get(i).getSegment().getDepDate(), s.getSegment().getDepDate())) {
                 selectedSeat = i;
                 return i;
 
