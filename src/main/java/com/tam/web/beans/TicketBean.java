@@ -1,27 +1,23 @@
 package com.tam.web.beans;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.*;
+import javax.faces.context.ExternalContext;
+import javax.faces.context.FacesContext;
 
+import com.tam.model.*;
 import com.tam.service.PaymentTypeService;
 import com.tam.service.SeatService;
 
-import com.tam.model.ContactInfo;
-import com.tam.model.Seat;
-import com.tam.model.Pax;
-import com.tam.model.PaymentType;
-import com.tam.model.Pnr;
-import com.tam.model.Port;
-import com.tam.model.Segment;
-import com.tam.model.Ticket;
 import com.tam.service.PortService;
 import com.tam.service.TicketService;
 
 @ManagedBean
-@SessionScoped
+@ApplicationScoped
 public class TicketBean implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -57,6 +53,7 @@ public class TicketBean implements Serializable {
     private List<String> portCodes = new ArrayList<>();
     private List<Seat> seats = new ArrayList<>();
     private Seat seat = new Seat();
+    private int selectedSeat;
     private String seatName = "SEAT_NULL";
 
     @PostConstruct
@@ -82,7 +79,6 @@ public class TicketBean implements Serializable {
     public void saveSegment() {
         segmentList.add(segment);
         ticketService.saveSegment(segment);
-        allocateSeat();
         segment = new Segment();
     }
 
@@ -93,12 +89,27 @@ public class TicketBean implements Serializable {
     public void savePax() {
         paxList.add(pax);
         ticketService.savePax(pax, contactInfo, pnr);
-        allocateSeat();
+        for (int i = 0; i < segmentList.size(); i++) {
+            Seat s = new Seat();
+            Coupon c = new Coupon();
+            Ticket t = new Ticket();
+            Pax tempPax = new Pax();
+            tempPax = pax;
+            t.setPax(tempPax);
+            c.setTicket(t);
+            s.setCoupon(c);
+            s.setSegment(segmentList.get(i));
+            seats.add(s);
+        }
         pax = new Pax();
     }
 
-    public void allocateSeat(){
-        seats = new ArrayList<>(paxList.size()*segmentList.size());
+    public void allocateSeat() {
+        seats = new ArrayList<>(paxList.size() * segmentList.size());
+    }
+
+    public void seatSelect(Seat s) {
+        selectedSeat = seats.indexOf(s);
     }
 
     public void saveTicket() {
@@ -139,6 +150,31 @@ public class TicketBean implements Serializable {
         }
         completeList.sort(String::compareToIgnoreCase);
         return completeList;
+    }
+
+    public void segmentSelect() throws IOException {
+        ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
+        externalContext.redirect(externalContext.getRequestContextPath() + "/ucakBilet.jsf");
+    }
+
+    public int indexOfSeats(Seat s) {
+        for (int i = 0; i < seats.size(); i++) {
+            if (seats.get(i).getCoupon().getTicket().getPax().getName().
+                    equals(s.getCoupon().getTicket().getPax().getName()) &&
+                    seats.get(i).getCoupon().getTicket().getPax().getSurname().
+                            equals(s.getCoupon().getTicket().getPax().getSurname()) &&
+                    seats.get(i).getSegment().getPortByDepPort().getCode().
+                            equals(s.getSegment().getPortByDepPort().getCode()) &&
+                    seats.get(i).getSegment().getPortByArrPort().getCode().
+                            equals(s.getSegment().getPortByArrPort().getCode()) &&
+                    seats.get(i).getSegment().getDepDate().
+                            equals(s.getSegment().getDepDate())) {
+                selectedSeat = i;
+                return i;
+
+            }
+        }
+        return 0;
     }
 
     public TicketService getTicketService() {
@@ -317,10 +353,22 @@ public class TicketBean implements Serializable {
     }
 
     public Segment getSeatSegment() {
+        System.out.println("getterseatsegment" + seatSegment.toString());
+
         return seatSegment;
     }
 
     public void setSeatSegment(Segment seatSegment) {
+
+        System.out.println("setterseatsegment");
         this.seatSegment = seatSegment;
+    }
+
+    public int getSelectedSeat() {
+        return selectedSeat;
+    }
+
+    public void setSelectedSeat(int selectedSeat) {
+        this.selectedSeat = selectedSeat;
     }
 }

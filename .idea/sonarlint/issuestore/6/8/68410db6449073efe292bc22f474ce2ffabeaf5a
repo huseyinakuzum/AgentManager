@@ -1,10 +1,12 @@
 
-dsquid:S00107"BConstructor has 10 parameters, which is greater than 7 authorized.(Şå•ñşÿÿÿÿ8»ô×œ›,
-Esquid:S1068"*Remove this unused "logger" private field.(±„ßr8¿×Úœ›,
-Wsquid:S1854";Remove this useless assignment to local variable "segment".(ì¹8ğşÕœ›,
-zsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¹Å¨ûÿÿÿÿ8ğşÕœ›,
-Ssquid:S1854"7Remove this useless assignment to local variable "pnr".(¿€±€8ğşÕœ›,
-[squid:S1854":Remove this useless assignment to local variable "coupon".(ñ´åùÿÿÿÿ8ğşÕœ›,
+Esquid:S1068"*Remove this unused "logger" private field.(±„ßr8ŸÉ˜œ,
 Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(È¥óáşÿÿÿÿ8ğşÕœ›,
-Zsquid:S1068"9Remove this unused "paymentTypeRepository" private field.(ïú›Ìûÿÿÿÿ8Şßáœ›,
+squid:S106"9Replace this use of System.out or System.err by a logger.(È¥óáşÿÿÿÿ8ŸÉ˜œ,
+zsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¹Å¨ûÿÿÿÿ8ŸÉ˜œ,
+Ssquid:S1854"7Remove this useless assignment to local variable "pnr".(¿€±€8ŸÉ˜œ,
+Ksquid:S1481"/Remove this unused "tempCoupon" local variable.(œ£ô8ŸÉ˜œ,
+Zsquid:S1068"9Remove this unused "paymentTypeRepository" private field.(ïú›Ìûÿÿÿÿ8ŸÉ˜œ,
+dsquid:S00107"BConstructor has 10 parameters, which is greater than 7 authorized.(Şå•ñşÿÿÿÿ8ŸÉ˜œ,
+Zsquid:S1854">Remove this useless assignment to local variable "tempCoupon".(œ£ô8ŸÉ˜œ,
+_squid:S1854">Remove this useless assignment to local variable "tempCoupon".(äà¨„øÿÿÿÿ8ŸÉ˜œ,
+Wsquid:S1854";Remove this useless assignment to local variable "segment".(ì¹8ŸÉ˜œ,

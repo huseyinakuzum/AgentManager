@@ -7,30 +7,20 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:p="http://primefaces.org/ui">
+
 <h:body>
+
     <ui:composition template="/template/common/commonLayout.xhtml">
         <ui:define name="content">
             <h:outputStylesheet library="css" name="base.css"/>
             <h:outputStylesheet library="css" name="ibe.css"/>
             <h:outputStylesheet library="css" name="ancillary.css"/>
+
             <h:form id="seatForm">
-                <h:inputHidden id="seatInput" value="#{ticketBean.seatName}"/>
-                <h:inputHidden id="seatSegmentInput" value="#{ticketBean.seatSegment}"/>
-
+                <h:inputHidden id="seatInput" value="#{ticketBean.seats.get(ticketBean.selectedSeat).seatName}"/>
                 <p:remoteCommand name="remoteChangeCommand" process="seatInput"/>
-                <p:remoteCommand name="remoteChangeCommand" process="seatSegmentInput"/>
-
-                <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
-                    <p:outputLabel for="segment" value="Segment:"/>
-                    <p:selectOneRadio id="segment" value="#{ticketBean  .seatSegment}" layout="grid" columns="3">
-                        <f:selectItems value="#{ticketBean.segmentList}" var="c" itemLabel="#{segment}"
-                                       itemValue="#{segment}"/>
-                    </p:selectOneRadio>
-                </h:panelGrid>
             </h:form>
-
-
-
+            #{ticketBean.selectedSeat}
 
             <div
                     class="seatoverview col-lg-5 col-md-6 col-sm-6 col-xs-12 seat-area"
@@ -45,7 +35,7 @@
                             <div id="A" class="seat-row gray-light">
                                 <div id="seatLetterPanel_A" class="seat letter">A</div>
                                 <div id="SeatDiv_1A" class="seat">
-                                    <input id="SEAT_1A" type="submit" name="SEAT_1A" value="1A"
+                                    <input id="SEAT_1A" type="submit" name="SEAT_1A" value=""
                                            style="background-color: IBE_PR_VIS_SEAT_COLOR_FS"
                                            title="?seat_price_message_FS? - 20.0 TRY" disabled="disabled"
                                            class="not-available"/>
@@ -72,7 +62,7 @@
                                            title="Window Side Seat - 0.0 TRY" class="middle"/>
                                 </div>
                                 <div id="SeatDiv_6A" class="seat">
-                                    <input id="SEAT_6A" type="submit" name="SEAT_6A" value="6A"
+                                    <input id="SEAT_6A" type="submit" name="SEAT_6A" value=""
                                            style="background-color: IBE_PR_VIS_SEAT_COLOR_WN"
                                            title="Window Side Seat - 0.0 TRY" class="middle"/>
                                 </div>
@@ -1067,12 +1057,10 @@
                             document.getElementById('seatForm:seatInput').value = seatId;
                             remoteChangeCommand();
                             document.getElementById('seatForm').submit();
-                            window.location.replace('/ucakBilet.jsf');
+                            window.location.replace('/ucakBilet.jsf?faces-redirect=true');
                         };
                     }
                 }
-
-
             </script>
 
         </ui:define>

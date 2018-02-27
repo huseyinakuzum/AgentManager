@@ -27,7 +27,7 @@ import com.tam.service.SearchService;
 import com.tam.service.TicketService;
 
 @ManagedBean
-@RequestScoped
+@SessionScoped
 public class SearchBean implements Serializable {
     private static final long serialVersionUID = 1L;
 

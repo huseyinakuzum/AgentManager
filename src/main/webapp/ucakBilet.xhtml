@@ -12,7 +12,7 @@
     <ui:composition template="/template/common/commonLayout.xhtml">
         <ui:define name="content">
             <h:inputHidden id="seatInputBilet" value="#{ticketBean.seatName}"/>
-
+            <h:inputHidden id="seatVar" value="#{ticketBean.seat}"/>
 
             <div class="row sameheiggt-container">
                 <div class="col-md-11">
@@ -94,7 +94,7 @@
                                             <i class="fa fa-check-circle" title="Add New"/>
                                         </h:commandButton>
                                         #{ticketBean.seatName}
-                                        #{ticketBean.seatSegment}
+                                        #{ticketBean.selectedSeat}
                                     </div>
                                 </div>
                             </div>
@@ -284,7 +284,7 @@
                                         <div class="row form-group">
                                             <h:commandButton id="ucus-ekle" value="Uçuş Ekle"
                                                              action="#{ticketBean.saveSegment()}">
-                                                <f:ajax execute="@form" render="ucusTablo"/>
+                                                <f:ajax execute="@form" render="ucusTablo "/>
                                                 <i class="fa fa-check-circle" title="Add New"/>
                                             </h:commandButton>
                                         </div>
@@ -319,6 +319,7 @@
                                                                  value="#{ticketBean.pax.name}"
                                                                  requiredMessage="Lütfen Adınızı Giriniz"
                                                                  required="true"/>
+
                                                     <span id="ad-error" class="has-error"> <h:message
                                                             for="ad"/>
 													</span>
@@ -385,31 +386,99 @@
                                                 </f:facet>
                                             </h:column>
 
-                                            <h:column>
-                                                <f:facet name="header">
-                                                    <h:outputLabel value="Koltuk"/>
-                                                </f:facet>
-                                                <h:outputText value="#{ticketBean.seatName}"/>
-                                                <f:facet name="footer">
-                                                    <h:commandButton id="koltukk-sec" value="Koltuk seç"
-                                                                     action="seatSelect">
-                                                        <i class="fa fa-check-circle" title="Koltuk seç"/>
-                                                    </h:commandButton>
-
-                                                </f:facet>
-                                            </h:column>
-
-
                                         </h:dataTable>
                                         <div class="col-xs-2">
                                             <div class="row form-group">
                                                 <h:commandButton id="yolcu-ekle" value="Yolcu Ekle"
                                                                  action="#{ticketBean.savePax()}">
-                                                    <f:ajax execute="@form" render="yolcuTablo"/>
+                                                    <f:ajax execute="@form" render="yolcuTablo seatForm:seatTablo"/>
                                                     <i class="fa fa-check-circle" title="Add New"/>
                                                 </h:commandButton>
                                             </div>
                                         </div>
+                                    </div>
+
+                                </div>
+                            </h:form>
+
+                        </f:view>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row sameheight-container">
+                <div class="col-md-11">
+                    <div class="card card-block ">
+                        <div class="title-block">
+                            <h3 class="title">Yolcu Bilgileri:</h3>
+                        </div>
+                        <f:view>
+                            <h:form role="form" id="seatForm">
+
+                                <div class="row form-group">
+                                    <div class="col-xs-10">
+                                        <h:dataTable id="seatTablo" class="table table-hover"
+                                                     value="#{ticketBean.seats}" var="se" rendered="true">
+
+                                            <h:column>
+                                                <f:facet name="header">
+                                                    <h:outputText value="Adi"/>
+                                                </f:facet>
+                                                <h:outputText value="#{se.coupon.ticket.pax.name}"/>
+
+                                            </h:column>
+
+                                            <h:column>
+                                                <f:facet name="header">
+                                                    <h:outputText value="Soyadi"/>
+                                                </f:facet>
+                                                <h:outputText value="#{se.coupon.ticket.pax.surname}"/>
+
+                                            </h:column>
+
+                                            <h:column>
+                                                <f:facet name="header">
+                                                    <h:outputText value="Dep Port"/>
+                                                </f:facet>
+                                                <h:outputText value="#{se.segment.portByDepPort.code}"/>
+
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">
+                                                    <h:outputLabel value="Arr Port"/>
+                                                </f:facet>
+                                                <h:outputText value="#{se.segment.portByArrPort.code}"/>
+
+
+                                            </h:column>
+
+                                            <h:column>
+                                                <f:facet name="header">
+                                                    <h:outputLabel value="Date"/>
+                                                </f:facet>
+                                                <h:outputText value="#{se.segment.depDate}"/>
+
+                                            </h:column>
+
+                                            <h:column>
+                                                <f:facet name="header">
+                                                    <h:outputLabel value="Koltuk"/>
+                                                </f:facet>
+                                                <h:outputText value="#{se.seatName}"/>
+
+                                            </h:column>
+
+                                            <h:column>
+                                                <h:commandButton id="koltuk-sec" value="#Koltuk Sec"
+                                                                 action="/seatSelect.jsf?faces-redirect=true">
+                                                    <f:ajax listener="#{ticketBean.indexOfSeats(se)}"/>
+                                                    <f:ajax execute="@form" render="seatTablo"/>
+                                                    <i class="fa fa-check-circle" title="Koltuk seç"/>
+                                                </h:commandButton>
+                                            </h:column>
+
+
+                                        </h:dataTable>
                                     </div>
 
                                 </div>
@@ -679,6 +748,8 @@
                                     .getElementById("biletForm:biletTablo:satis"))
                                 .setCursorPosition(1);
                         });
+
+
             </script>
         </ui:define>
     </ui:composition>

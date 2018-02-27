@@ -1,19 +1,19 @@
 
-Esquid:S1068"*Remove this unused "logger" private field.(±„ßr8°øÒª›,
-}squid:S4144"\Update this method so that its implementation is not identical to "getSegments" on line 252.(õ¾‹şÿÿÿÿ8°øÒª›,
-}squid:S4144"\Update this method so that its implementation is not identical to "setSegments" on line 256.(ÆŒ‹¢üÿÿÿÿ8°øÒª›,
+_squid:S1155">Use isEmpty() to check whether the collection is empty or not.(åù©îıÿÿÿÿ8ŸÉ˜œ,
+}squid:S4144"\Update this method so that its implementation is not identical to "setSegments" on line 256.(ÆŒ‹¢üÿÿÿÿ8ŸÉ˜œ,
+Esquid:S1068"*Remove this unused "logger" private field.(±„ßr8ŸÉ˜œ,
+Hsquid:S1172",Remove this unused method parameter "event".(Èâğ‚8ŸÉ˜œ,
+Nsquid:S1481"-Remove this unused "codeList" local variable.(û“šìıÿÿÿÿ8ŸÉ˜œ,
 Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(¸³ƒ‡ıÿÿÿÿ8°øÒª›,
+squid:S106"9Replace this use of System.out or System.err by a logger.(¸³ƒ‡ıÿÿÿÿ8ŸÉ˜œ,
+Hsquid:S1172",Remove this unused method parameter "event".(¡ô«È8ŸÉ˜œ,
+Psquid:S1948"/Make "ticketService" transient or serializable.(€âèÅùÿÿÿÿ8ŸÉ˜œ,
+Zsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(Êêœ‚8ŸÉ˜œ,
 T
-squid:S106"9Replace this use of System.out or System.err by a logger.(á‹Ã…8°øÒª›,
-Nsquid:S1481"-Remove this unused "codeList" local variable.(û“šìıÿÿÿÿ8°øÒª›,
-Hsquid:S1172",Remove this unused method parameter "event".(¡ô«È8°øÒª›,
-Hsquid:S1172",Remove this unused method parameter "event".(Èâğ‚8°øÒª›,
-]squid:S1854"<Remove this useless assignment to local variable "codeList".(û“šìıÿÿÿÿ8°øÒª›,
-Psquid:S1948"/Make "ticketService" transient or serializable.(€âèÅùÿÿÿÿ8°øÒª›,
-Isquid:S1948"-Make "portService" transient or serializable.(ÂÑÑÖ8°øÒª›,
-Ksquid:S1948"/Make "searchService" transient or serializable.(ÎÜÓÜ8°øÒª›,
-Csquid:S1948"(Make "logger" transient or serializable.(±„ßr8°øÒª›,
-_squid:S1155">Use isEmpty() to check whether the collection is empty or not.(¹ŞÊÿÿÿÿÿ8°øÒª›,
-_squid:S1155">Use isEmpty() to check whether the collection is empty or not.(åù©îıÿÿÿÿ8°øÒª›,
-Zsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(Êêœ‚8°øÒª›,
+squid:S106"9Replace this use of System.out or System.err by a logger.(á‹Ã…8ŸÉ˜œ,
+Csquid:S1948"(Make "logger" transient or serializable.(±„ßr8ŸÉ˜œ,
+}squid:S4144"\Update this method so that its implementation is not identical to "getSegments" on line 252.(õ¾‹şÿÿÿÿ8ŸÉ˜œ,
+]squid:S1854"<Remove this useless assignment to local variable "codeList".(û“šìıÿÿÿÿ8ŸÉ˜œ,
+Ksquid:S1948"/Make "searchService" transient or serializable.(ÎÜÓÜ8ŸÉ˜œ,
+Isquid:S1948"-Make "portService" transient or serializable.(ÂÑÑÖ8ŸÉ˜œ,
+_squid:S1155">Use isEmpty() to check whether the collection is empty or not.(¹ŞÊÿÿÿÿÿ8ŸÉ˜œ,

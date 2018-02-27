@@ -1,5 +1,5 @@
 
-qsquid:S2068"U'password' detected in this expression, review this potentially hardcoded credential.(ží’¯8‰ýÒª›,
-wsquid:S4144"[Update this method so that its implementation is not identical to "setUserName" on line 57.(Ÿš¯‡8‰ýÒª›,
-‹squid:S1845"oRename method "setUsername" to prevent any misunderstanding/clash with method "setUserName" defined on line 57.(Ÿš¯‡8‰ýÒª›,
-ssquid:UselessImportCheck"ERemove this unused import 'org.springframework.stereotype.Component'.(Þ÷Ñ¸ÿÿÿÿÿ8‰ýÒª›,
+qsquid:S2068"U'password' detected in this expression, review this potentially hardcoded credential.(ží’¯8Áíî¸›,
+wsquid:S4144"[Update this method so that its implementation is not identical to "setUserName" on line 57.(Ÿš¯‡8Áíî¸›,
+‹squid:S1845"oRename method "setUsername" to prevent any misunderstanding/clash with method "setUserName" defined on line 57.(Ÿš¯‡8Áíî¸›,
+ssquid:UselessImportCheck"ERemove this unused import 'org.springframework.stereotype.Component'.(Þ÷Ñ¸ÿÿÿÿÿ8Áíî¸›,

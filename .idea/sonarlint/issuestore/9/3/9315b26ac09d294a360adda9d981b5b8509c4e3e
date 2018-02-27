@@ -1,7 +1,12 @@
 
-Nsquid:S1948"-Make "seatService" transient or serializable.(ÕçÖÉüÿÿÿÿ8ÿ§Ãª›,
-Psquid:S1948"4Make "paymentTypeService" transient or serializable.(–ôÔü8ÿ§Ãª›,
-osquid:S1450"SRemove the "port" field and declare it as a local variable in the relevant methods.(Ü— ô8ÿ§Ãª›,
-Isquid:S1948"-Make "portService" transient or serializable.(ÂÑÑÖ8ÿ§Ãª›,
-Psquid:S1948"/Make "ticketService" transient or serializable.(€âèÅùÿÿÿÿ8ÿ§Ãª›,
-Dsquid:S1068"(Remove this unused "port" private field.(Ü— ô8ÿ§Ãª›,
+Nsquid:S1948"-Make "seatService" transient or serializable.(ÕçÖÉüÿÿÿÿ8§Ó³¢,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(”çÿÿÿÿÿ8§Ó³¢,
+osquid:S1450"SRemove the "port" field and declare it as a local variable in the relevant methods.(Ü— ô8§Ó³¢,
+Dsquid:S1068"(Remove this unused "port" private field.(Ü— ô8§Ó³¢,
+Psquid:S1948"/Make "ticketService" transient or serializable.(€âèÅùÿÿÿÿ8§Ó³¢,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(Š’Ô°úÿÿÿÿ8§Ó³¢,
+Wsquid:S1854";Remove this useless assignment to local variable "tempPax".(Ä¥ö…8§Ó³¢,
+Isquid:S1948"-Make "portService" transient or serializable.(ÂÑÑÖ8§Ó³¢,
+Psquid:S1948"4Make "paymentTypeService" transient or serializable.(–ôÔü8§Ó³¢,

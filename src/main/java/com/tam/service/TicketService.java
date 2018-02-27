@@ -105,6 +105,7 @@ public class TicketService {
         }
 
         for (Seat seat : seats) {
+            seat.setSeatName(seat.getSeatName().substring(6));
             for (Coupon coupon : coupons) {
                 if (coupon.getSegment() == seat.getSegment()) {
                     seat.setCoupon(coupon);
